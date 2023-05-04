@@ -1,0 +1,20 @@
+{
+  "name": "curso-cypress-escola-tat",
+  "version": "1.0.0",
+  "description": "curso de cypress da escola TaT  ",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "keywords": [
+    "cypress",
+    "test",
+    "automation",
+    "e2e"
+  ],
+  "author": "jhontan",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^12.11.0"
+  }
+}
