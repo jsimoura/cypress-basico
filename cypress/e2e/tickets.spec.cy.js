@@ -1,22 +1,18 @@
 describe('TICKETS', () => {
-  beforeEach(() => cy.visit('https://bit.ly/2XSuwCW'));
-   
+  beforeEach(() => cy.visit('/2XSuwCW'));
+  
   it("fills all the text input fields", () => {
-    const url = 'https://bit.ly/2XSuwCW'
     const firstName = 'Jhonatan'
     const lastName = 'Simoura'
     const email = 'jhonatan.simoura@gmail.com'
     const requests = 'vegetarian'
     const fullName = `${firstName} ${lastName}`
 
-
-    cy.visit(url)
     cy.get('#first-name').type(firstName)
     cy.get('#last-name').type(lastName)
     cy.get('#email').type(email)
     cy.get('#requests').type(requests)
-    cy.get('#signature').type(fullName) // Obtem o elemento pela id = '#' | Obtem o elemento pela class = '.'
-
+    cy.get('#signature').type(fullName) 
    });
 
    it("select two tickets", () => {
@@ -35,7 +31,6 @@ describe('TICKETS', () => {
     cy.get("#friend").check();
     cy.get("#publication").check();
     cy.get("#publication").uncheck();
-
    });
   
   it("has 'TICKETBOX' header's heading", () => { 
@@ -51,7 +46,6 @@ describe('TICKETS', () => {
     cy.get("@email")
     .clear()
     .type("talkingabouttsting@gmail.com");
-
     cy.get("#email.invalid").should("not.exist");
     });
 
